@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <style>
+        * { box-sizing: border-box; margin:0; padding:0; }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Gradient background for the whole page */
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        header {
+            background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
+            padding: 1.5rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        nav {
+            background: teal;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5rem;
+        }
+        nav a { color:#fff; text-decoration:none; }
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        article {
+            background: rgba(255,255,255,0.8); /* slight transparency to let the body gradient show */
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        aside {
+            background: rgba(255,192,203,0.8); /* slight transparency */
+            padding: 1.5rem;
+            flex-basis: 300px;
+        }
+
+        footer {
+            background: #007bff;
+            color: #fff;
+            padding: 0.8rem;
+            text-align: center;
+        }
+
+        @media (max-width: 480px) {
+            nav, main { flex-direction: column; }
+            aside { flex-basis: auto; }
+        }
+        @media (min-width: 481px) and (max-width: 768px) {
+            main { flex-direction: column; }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            article { flex-grow: 2; }
+            aside   { flex-basis: 250px; }
+        }
+        @media (min-width: 1920px) {
+            main { max-width: 1920px; margin:0 auto; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Simple Website</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Content</a>
+        <a href="#">Google</a>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Welcome!</h2>
+            <p>This is a simple responsive web page built with semantic tags and a gradient background.</p>
+        </article>
+
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Some extra information goes here.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+</body>
+</html>
